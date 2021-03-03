@@ -24,7 +24,7 @@ var arrayBombs = [];//var contentente bombe generate dal computer
 var numBombs = 16;//numero totale bombe generate dal computer
 var arrayUserNumbers = [];
 var max = 100;
-var chosenLevel
+var chosenLevel;
 
 
 //chiedo all'utente la difficoltà finchè non mette i dati correttamente
@@ -38,13 +38,13 @@ do {
 
 switch (chosenLevel) {
     case 2 :
-    max = 50;
-    break;
+        max = 50;
+        break;
     case 1 :
-    max = 80;
-    break;
+        max = 80;
+        break;
     default:
-    max= 100;
+        max= 100;
 };
 
 console.log(max);
@@ -61,14 +61,14 @@ while (arrayBombs.length < numBombs) { //i cicli aumentano se l'array contain tr
 };
 
 
+console.log(arrayBombs);
 //faccio inserire all'utente un numero
 
 var gameOver=false;
 
 
-while (arrayUserNumbers.length < (max - numBombs) && (arrayContain(UserNumber,arrayBombs) == false) && gameOver==false) {
+while (arrayUserNumbers.length < (max - numBombs)  && gameOver==false) {
     var UserNumber = parseInt(prompt("Inserisci un numero"));
-    gameOver=false;
 
     if (arrayContain(UserNumber,arrayBombs) == true) {
         alert("Mi dispiace,la prossima volta sarai più fortunato! Hai fatto " + (arrayUserNumbers.length) + " punti");
